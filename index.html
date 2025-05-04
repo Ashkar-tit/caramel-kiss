@@ -1,0 +1,219 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caramel Kiss - Luxury Desserts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="real.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Caramel Kiss</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+          <a href="https://ashkar-tit.github.io/caramel--kiss/">RIO</a>
+          <a herf="#Compare">Compare</a>
+            <a href="#contact">Contact</a>
+            <a href="#cart" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>"A Kiss You Crave For"</h1>
+            <p>Handcrafted desserts for moments of pure bliss</p>
+            <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Signature Desserts</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="item-image tiramisu"></div>
+                <div class="item-details">
+                    <h3>Classic Tiramisu</h3>
+                    <p>Italian mascarpone cream layered with coffee-soaked ladyfingers</p>
+                    <div class="price">₹399</div>
+                    <button class="add-to-cart" onclick="addToCart('Classic Tiramisu', 399)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image biscoff"></div>
+                <div class="item-details">
+                    <h3>Biscoff Dream</h3>
+                    <p>Lotus Biscoff spread, cream cheese mousse, crushed cookies</p>
+                    <div class="price">₹449</div>
+                    <button class="add-to-cart" onclick="addToCart('Biscoff Dream', 449)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image hot-chocolate"></div>
+                <div class="item-details">
+                    <h3>Luxury Hot Chocolate</h3>
+                    <p>Belgian chocolate, whipped cream, marshmallows</p>
+                    <div class="price">₹299</div>
+                    <button class="add-to-cart" onclick="addToCart('Luxury Hot Chocolate', 299)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-image brownie"></div>
+                <div class="item-details">
+                    <h3>Triple Chocolate Brownie</h3>
+                    <p>Three layers of fudgy chocolate goodness</p>
+                    <div class="price">₹349</div>
+                    <button class="add-to-cart" onclick="addToCart('Triple Chocolate Brownie', 349)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Our Story</h2>
+            <p>Founded in 2020, Caramel Kiss brings the finest dessert experiences to our cherished customers. Each creation is handcrafted with premium ingredients and adorned with love, making every bite a moment to remember.</p>
+            <p>Our master pastry chefs combine traditional techniques with modern innovation to create desserts that are not just treats, but works of art.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Visit Our Store</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Thanjavur,food street near langval mall</p>
+                <p><i class="fas fa-phone"></i> +91 9894697608</p>
+                <p><i class="fas fa-envelope"></i> hello@caramelkiss.com</p>
+                <div class="hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Sunday: 06:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h4>Total: <span id="cart-total">₹0</span></h4>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Caramel Kiss</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Caramel Kiss. All rights reserved.</p>
+        </div>
+      <!-- Add after the contact section -->
+<section id="customer-creations" class="customer-creations">
+    <h2>Customer Inspired Creations  </h2>
+    <p class="section-subtitle">Desserts born from your wonderful suggestions</p>
+    
+    <div class="creation-container">
+        <div class="featured-creation">
+            <div class="creation-header">
+                <h3>Featured This Month</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="creation-card">
+                <div class="creation-image"></div>
+                <div class="creation-details">
+                    <h4>Mango Biscoff Fusion</h4>
+                    <p class="inspiration">Inspired by Priya's suggestion</p>
+                    <p class="description">Alphonso mango mousse layered with crushed Biscoff cookies and topped with mango coulis</p>
+                    <div class="price">₹499</div>
+                    <button class="add-to-cart" onclick="addToCart('Mango Biscoff Fusion', 499)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="suggestion-box">
+            <h3>Suggest a Creation</h3>
+            <form id="suggestion-form" class="suggestion-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Describe your dream dessert..." required></textarea>
+                <div class="flavor-tags">
+                    <span>Popular flavors:</span>
+                    <button type="button" class="flavor-tag">Chocolate</button>
+                    <button type="button" class="flavor-tag">Caramel</button>
+                    <button type="button" class="flavor-tag">Fruit</button>
+                    <button type="button" class="flavor-tag">Coffee</button>
+                    <button type="button" class="flavor-tag">Nuts</button>
+                </div>
+                <button type="submit" class="submit-suggestion">Submit Your Creation</button>
+            </form>
+        </div>
+
+        <div class="past-creations">
+            <h3>Previous Customer Creations</h3>
+            <div class="creation-slider">
+                <div class="creation-slide">
+                    <div class="mini-creation-card">
+                        <img src="https://img.delicious.com.au/qROcL6fp/del/2019/10/pistachio-raspberry-and-rose-layer-cake-117034-2.jpg" alt="Rose Pistachio Delight">
+                        <div class="mini-card-details">
+                            <h5>Rose Pistachio Delight</h5>
+                            <p>By Rahul M.</p>
+                            <div class="price">₹449</div>
+                            <button class="add-to-cart" onclick="addToCart('Rose Pistachio Delight', 449)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="creation-slide">
+                    <div class="mini-creation-card">
+                        <img src="https://amintiri.in/cdn/shop/files/image_d2062907-6fdd-4cde-84a2-b8d5e12c4a25.jpg?v=1692604818&width=1946" alt="Saffron Rasmalai Cake">
+                        <div class="mini-card-details">
+                            <h5>Saffron Rasmalai Cake</h5>
+                            <p>By Anjali S.</p>
+                            <div class="price">₹549</div>
+                            <button class="add-to-cart" onclick="addToCart('Saffron Rasmalai Cake', 549)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </footer>
+
+    <script src="real.js"></script>
+</body>
+</html>

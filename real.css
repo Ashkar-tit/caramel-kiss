@@ -1,0 +1,554 @@
+/* styles.css */
+:root {
+    --primary-color: #F8E2E2; /* Soft Pink */
+    --secondary-color: #F5D6BA; /* Light Sandal */
+    --accent-color: #D4A5A5; /* Dusty Rose */
+    --text-color: #000000; /* Deep Brown */
+    --light-text: #8B6B61; /* Light Brown */
+    --background: #FFF9F6; /* Off White */
+    --gold: #D4AF37; /* Premium Gold */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    text color: #000000;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-color: #000000;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: #000000;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(248,226,226,0.3), rgba(245,214,186,0.3)),
+                url('dessert-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 2rem;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.menu-section {
+    padding: 5rem 10%;
+    background: var(--primary-color);
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.item-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tiramisu { background-image: url('https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2024/09/THUMB-VIDEO-2_rev1-56.jpeg?im=Resize,width=742;'); }
+.biscoff { background-image: url('https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQeDfbitZvnfteF8ERDt2m5WTh-K2ZUo4OcUO_PpT2tQ_xo3elBRhZX4cl5gJRUc3I9wsOvJ36KNRsTlrDrv1xP7B6wt7rH1M9AJxeKhQDv'); }
+.hot-chocolate { background-image: url('https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/hot_chocolate_78843_16x9.jpg'); }
+.brownie { background-image: url('https://alpineella.com/wp-content/uploads/2021/02/IMG_8169.jpg'); }
+
+.item-details {
+    padding: 1.5rem;
+}
+
+.item-details h3 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin: 1rem 0;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.about-section {
+    padding: 5rem 10%;
+    background: var(--secondary-color);
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    padding: 5rem 10%;
+    background: var(--primary-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-sidebar {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s;
+    z-index: 1001;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#cart-items {
+    padding: 1rem;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.cart-total {
+    padding: 1rem;
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    background: var(--text-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+}
+/* Add to styles.css */
+.customer-creations {
+    padding: 5rem 10%;
+    background: linear-gradient(to bottom, var(--background), var(--primary-color));
+}
+
+.customer-creations h2 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #00000:
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.creation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.featured-creation {
+    grid-column: 1 / -1;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.creation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.rating {
+    color: var(--gold);
+}
+
+.creation-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.creation-image {
+    height: 300px;
+    background-image: url('mango-biscoff.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.creation-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inspiration {
+    color: var(--accent-color);
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.suggestion-box {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.suggestion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.suggestion-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.flavor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.flavor-tag {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.flavor-tag.active {
+    background: var(--accent-color);
+    color: black;
+}
+
+.submit-suggestion {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.submit-suggestion:hover {
+    transform: translateY(-2px);
+}
+
+.past-creations {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.creation-slider {
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.creation-slide {
+    display: none;
+}
+
+.creation-slide.active {
+    display: block;
+}
+
+.mini-creation-card {
+    background: var(--background);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mini-creation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.mini-card-details {
+    padding: 1rem;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.slider-controls button {
+    background: var(--primary-color);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s;
+}
+
+.slider-controls button:hover {
+    background: var(--accent-color);
+}
+
+@media (max-width: 992px) {
+    .creation-container {
+        grid-template-columns: 1fr;
+    }
+
+    .creation-card {
+        grid-template-columns: 1fr;
+    }
+
+    .creation-image {
+        height: 200px;
+    }
+}
+/* Add to styles.css */
+.add-to-cart-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-out 1.7s forwards;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+
